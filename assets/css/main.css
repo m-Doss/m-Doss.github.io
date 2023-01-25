@@ -1995,8 +1995,9 @@ input, select, textarea {
 
 		.features section {
 			padding: 3.5em 3em 1em 7em ;
-			width: 50%;
+			width: 100%;  /* Changes the feature box ratio, use 100% for stacked boxes */
 			border-top: solid 1px rgba(255, 255, 255, 0.15);
+			border-bottom: solid 1px rgba(255, 255, 255, 0.15);
 			position: relative;
 		}
 
@@ -3240,7 +3241,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #5e42a6;
+			background-color: #567189;
 		}
 
 		.wrapper.style1-alt {
@@ -3256,7 +3257,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: #2b4680;
 		}
 
 		.wrapper.style3-alt {
@@ -3524,7 +3525,7 @@ input, select, textarea {
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: #312450;
+		background: #7B8FA1;
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3761,14 +3762,14 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:before {
-				background: #3c2c62;
+				background: #567189;
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #567189, #CFB997);
+				background-image: -webkit-linear-gradient(to right, #567189, #CFB997);
+				background-image: -ms-linear-gradient(to right, #567189, #CFB997);
+				background-image: linear-gradient(to right, #567189, #CFB997);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
