@@ -133,52 +133,204 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 							<!-- Table -->
 								<section>
-									<h2>Table</h2>
-									<h3>Default</h3>
+									<h2>Tables</h2>
+									<h3>Stores</h3>
 									<div class="table-wrapper">
 										<table>
 											<thead>
 												<tr>
-													<th>Name</th>
+													<th>Method</th>
+													<th>Endpoint</th>
 													<th>Description</th>
-													<th>Price</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
+													<td>GET</td>
+													<td>/store</td>
+													<td>Get a list of all stores.</td>
 												</tr>
 												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
+													<td>POST</td>
+													<td>/store</td>
+													<td>Create a store.</td>
 												</tr>
 												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
+													<td>GET</td>
+													<td>/store/{id}</td>
+													<td>Get a single store, given its unique id.</td>
 												</tr>
 												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
+													<td>DELETE</td>
+													<td>/store/{id}</td>
+													<td>Delete a store, given its unique id.</td>
 												</tr>
 											</tbody>
 											<tfoot>
-												<tr>
+												<!-- <tr>
 													<td colspan="2"></td>
 													<td>100.00</td>
-												</tr>
+												</tr> -->
 											</tfoot>
 										</table>
 									</div>
+
+							<!-- Table -->
+							<section>
+								<!-- <h2>Table</h2> -->
+								<h3>Items</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Method</th>
+												<th>Endpoint</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>GET</td>
+												<td>/item</td>
+												<td>Get a list of all items in all stores.</td>
+											</tr>
+											<tr>
+												<td>POST</td>
+												<td>/item</td>
+												<td>Create a new item, given its name and price in the body of thhe request.</td>
+											</tr>
+											<tr>
+												<td>PUT</td>
+												<td>/item/{id}</td>
+												<td>Get information about a specific item, given its unique id.</td>
+											</tr>
+											<tr>
+												<td>GET</td>
+												<td>/item/{id}</td>
+												<td>Update an item given its unique id. The item name or price can be given in the body of the request.</td>
+											</tr>
+											<tr>
+												<td>DELETE</td>
+												<td>/item/{id}</td>
+												<td>Delete an item given its unique id.</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<!-- <tr>
+												<td colspan="2"></td>
+												<td>100.00</td>
+											</tr> -->
+										</tfoot>
+									</table>
+								</div>
+
+							<!-- Table -->
+							<section>
+								<!-- <h2>Table</h2> -->
+								<h3>Users</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Method</th>
+												<th>Endpoint</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>POST</td>
+												<td>/register</td>
+												<td>Create user accounts given an email and password.</td>
+											</tr>
+											<tr>
+												<td>POST</td>
+												<td>/login</td>
+												<td>Get a JWT given an email and password.</td>
+											</tr>
+											<tr>
+												<td>POST</td>
+												<td>/logout</td>
+												<td>Get a JWT given an email and password.</td>
+											</tr>
+											<tr>
+												<td>POST</td>
+												<td>/refresh</td>
+												<td>Get a fresh JWT given a refresh JWT.</td>
+											</tr>
+											<tr>
+												<td>GET</td>
+												<td>/user/{user_id}</td>
+												<td>(dev-only) Get info about a user given their ID.</td>
+											</tr>
+											<tr>
+												<td>DELETE</td>
+												<td>/user/{user_id}</td>
+												<td>(dev-only) Delete a user given their ID.</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<!-- <tr>
+												<td colspan="2"></td>
+												<td>100.00</td>
+											</tr> -->
+										</tfoot>
+									</table>
+								</div>
+
+							<!-- Table -->
+							<section>
+								<!-- <h2>Table</h2> -->
+								<h3>Tags</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Method</th>
+												<th>Endpoint</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>GET</td>
+												<td>/store/{id}/tag</td>
+												<td>Get a list of tags in a store.</td>
+											</tr>
+											<tr>
+												<td>POST</td>
+												<td>/store/{id}/tag</td>
+												<td>Create a new tag.</td>
+											</tr>
+											<tr>
+												<td>POST</td>
+												<td>/item/{id}/tag/{id}</td>
+												<td>Link an item in a store with a tag from the same store.</td>
+											</tr>
+											<tr>
+												<td>DELETE</td>
+												<td>/item/{id}/tag/{id}</td>
+												<td>Unlink a tag from an item.</td>
+											</tr>
+											<tr>
+												<td>GET</td>
+												<td>/tag/{id}}</td>
+												<td>Get information about a tag given its unique id.</td>
+											</tr>
+											<tr>
+												<td>DELETE</td>
+												<td>/tag/{id}</td>
+												<td>Delete a tag, which must have no associated items.</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<!-- <tr>
+												<td colspan="2"></td>
+												<td>100.00</td>
+											</tr> -->
+										</tfoot>
+									</table>
+								</div>
 
 									<h3>Alternate</h3>
 									<div class="table-wrapper">
