@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
@@ -44,21 +39,48 @@
 					Data Factory.
 					I will be using the <a
 						href="https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/adventure-works"
-						class="active">AdventureWorks</a> data set published by Microsoft. Here's a <a href="/Projects/README.html">README</a> in notebook style that includes all CREATE tables and views queries.</p>
+						class="active">AdventureWorks</a> data set published by Microsoft. Here's a <a
+						href="/Projects/PipelineNotebook.html">notebook</a> that contains all CREATE tables and
+					views queries.</p>
+				
 				<h3>Approach</h3>
 				<ul>
-					<li>My first step was to create a new schema that would contain the source and sink. I called the new schema "PipelineSchema"</li>
-					<li>I then created three views using the existing tables ib the existing schema.</li>
-					<li>After that, I had to make three tables that I can unload the data from the views in. The tables were modeled using the right data types and constraints as found in the views.</li>
-					<li>Lastly, I set up a new pipeline in Azure's Data Factory that copies data from the source (views) into the designated sink (tables).</li>
+					<li>Step 1: Create a new Schema</li>
+					<ul style="list-style-type:none;">
+						<li>The new schema will have the newly created views and data models.<br></li>
+					</ul>
+
+					<li>Step 2: Create three views</li>
+					<ul style="list-style-type:none;">
+						<li>Three views have been created from the existing tables found under the existing "SalesLT"
+							schema.</li>
+						<li>The three views were created using different combinations of the available tables.</li>
+						<li>The views will act as the source of the data pipeline.</li>
+					</ul>
+
+					<li>Step 3: Create three data models</li>
+					<ul style="list-style-type:none;">
+						<li>Three data models were created in the form of three empty tables.</li>
+						<li>The tables will act as the sink of the data pipelines.</li>
+					</ul>
+
+					<li>Step 4: Copy data from the views and into the newly modeled tables</li>
+					<ul style="list-style-type:none;">
+						<li>Using Azure Data Factory, the data in the views were copied into thier comparable modeled
+							tables.</li>
+					</ul>
+
+					<li>Step 5: Validate that all records were correctly</li>
+					<ul style="list-style-type:none;">
+						<li>A simple SELECT COUNT(*) sql clause applied to each view and its matching table to verfiy
+							that all records were copied.</li>
+					</ul>
 				</ul>
-				<h3>Tech Stack</h3>
-				<ul>
-					<li>Microsoft Azure Database</li>
-					<li>Microsoft Azure Data Factory</li>
-				</ul>
+
+				<h3>Check out the project's <a href="https://github.com/m-Doss/azure-relational-data-pipeline">GitHub Repo</a></h3>
 			</div>
 		</section>
+
 		<section id="main" class="wrapper">
 			<div class="inner">
 				<h1 class="major">Semi-Structured Data Pipeline</h1>
@@ -83,7 +105,6 @@
 		<div class="inner">
 			<ul class="menu">
 				<li>&copy; Untitled. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 			</ul>
 		</div>
 	</footer>
